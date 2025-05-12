@@ -7,7 +7,7 @@ namespace BandsApp.Web
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
 
-            app.MapGet("/", () => "Hello World!");//test Niklas Test Sarbast 
+            app.MapGet("/", () => "Hello World!");//test Niklas Test Sarbast //Test Astrid
 
             app.Run();
         }
