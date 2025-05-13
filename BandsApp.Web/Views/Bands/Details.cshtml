@@ -1,13 +1,33 @@
 ﻿@model BandsApp.Web.Models.Band
 
 <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Band</title>
-    </head>
-    <body>
-        <h2>@Model.Name</h2>
-        <p>@Model.Description</p>
-    <img src="~/Images/@Model.ImageUrl" alt="@Model.Name" />
+<html>
+<head>
+    <title>Band</title>
+    <link rel="stylesheet" href="https://unpkg.com/@@picocss/pico@@latest/css/pico.classless.min.css">
+    
+</head>
+<body>
+    <h2>@Model.Name</h2>
+    <p>@Model.Description</p>
+
+
+    <ul>
+
+        @foreach (var album in Model.Albums)
+        {
+        <li>@album.Name</li>    
+        }
+    </ul>
+
+    <div>
+        <img width = "250px"   src="~/Images/@Model.ImageUrl" alt="@Model.Name" />
+    </div>
+    <div>
+        <iframe width="560" height="315" src="@Model.YouTubeUrl"
+            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
     </body>
     </html>
