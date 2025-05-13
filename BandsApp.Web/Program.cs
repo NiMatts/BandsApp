@@ -11,6 +11,7 @@ namespace BandsApp.Web
             var app = builder.Build();
 
             app.MapControllers();
+            app.UseStaticFiles();
             app.Run();
         }
     }
